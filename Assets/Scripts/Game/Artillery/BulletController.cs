@@ -6,10 +6,16 @@ namespace Game.Artillery
     {
         public Vector2 Direction = Vector2.zero;
         public float Speed;
-        
-        private void Update()
+        private Rigidbody2D _rigidbody;
+
+        private void Start()
         {
-            transform.position += (Vector3) Direction * Time.deltaTime * Speed;
+            _rigidbody = GetComponent<Rigidbody2D>();
+        }
+
+        private void FixedUpdate()
+        {
+            _rigidbody.MovePosition(transform.position + (Vector3) Direction * Time.deltaTime * Speed);
         }
 
         private void OnBecameInvisible()

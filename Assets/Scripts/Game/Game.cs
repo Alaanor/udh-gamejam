@@ -10,6 +10,9 @@ namespace Game
         public static PoolManagerBullet ShootPool;
         public static SpaceShip PlayerSpaceShip;
 
+        public const string FromPlayer = "from player";
+        public const string FromEnemies = "from enemies";
+
         private void Start()
         {
             // I don't like this kind of access but well, it's a gamejam so fuck

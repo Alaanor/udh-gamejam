@@ -157,11 +157,6 @@ Prefab:
       propertyPath: BulletStock
       value: 
       objectReference: {fileID: 1619928196}
-    - target: {fileID: 114006558050203924, guid: ebbd32e8b77df1f42bd9626dc0600c62,
-        type: 2}
-      propertyPath: GunUser
-      value: 
-      objectReference: {fileID: 1130158807}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ebbd32e8b77df1f42bd9626dc0600c62, type: 2}
   m_IsPrefabAsset: 0
@@ -380,15 +375,14 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 114250065609706342, guid: 528430ebccb274547b10a972ef33e445,
+        type: 2}
+      propertyPath: BulletStock
+      value: 
+      objectReference: {fileID: 1619928196}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 528430ebccb274547b10a972ef33e445, type: 2}
   m_IsPrefabAsset: 0
---- !u!114 &1130158807 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 114936916586617568, guid: ebbd32e8b77df1f42bd9626dc0600c62,
-    type: 2}
-  m_PrefabInternal: {fileID: 55953977}
-  m_Script: {fileID: 11500000, guid: 56153a721fcc4084ae59ecb023b0fe5a, type: 3}
 --- !u!1 &1619928194
 GameObject:
   m_ObjectHideFlags: 0
@@ -433,37 +427,3 @@ MonoBehaviour:
   WarmUpAmount: 250
   Item: {fileID: 1760647013220844, guid: d0a8530dd9fd99c449e60a7e3132e8f8, type: 2}
   UnusedPlace: {fileID: 1619928195}
---- !u!1 &1669089159 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1048832336952362, guid: 528430ebccb274547b10a972ef33e445,
-    type: 2}
-  m_PrefabInternal: {fileID: 856369582}
---- !u!114 &1669089160
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1669089159}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 56153a721fcc4084ae59ecb023b0fe5a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SpaceShipSize: 0.5
---- !u!114 &1669089161
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1669089159}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 164bc22b25eb47368b77009cc2651dc9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Cadence: 0.125
-  Speed: 5
-  GunUser: {fileID: 1669089160}
-  BulletStock: {fileID: 1619928196}
-  AmountDirection: 5
-  Offset: 0

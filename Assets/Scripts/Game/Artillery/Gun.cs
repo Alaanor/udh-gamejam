@@ -27,8 +27,13 @@ namespace Game.Artillery
         protected void ShootOne(Vector2 direction)
         {
             var bullet = BulletStock.GetItem();
+            
             bullet.Direction = direction;
             bullet.Speed = Speed;
+            bullet.gameObject.tag = GunUser.IsPlayer
+                ? Game.FromPlayer
+                : Game.FromEnemies;
+            
             bullet.transform.position = GunUser.GetBulletStartPosition(bullet.Direction);
             bullet.transform.rotation = Quaternion.AngleAxis(
                 Vector2.SignedAngle(Vector2.up, direction),

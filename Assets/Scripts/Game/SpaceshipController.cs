@@ -8,14 +8,17 @@ namespace Game
 		public float Speed = 15f;
 		public Gun GunSystem;
 
+		private Rigidbody2D _rigidbody;
+
 		private void Start()
 		{
 			GunSystem = GetComponent<Gun>();
+			_rigidbody = GetComponent<Rigidbody2D>();
 		}
 
-		private void Update ()
+		private void FixedUpdate ()
 		{
-			transform.position += (Vector3) Game.Input.RawMovement * Time.deltaTime * Speed;
+			_rigidbody.MovePosition(transform.position + (Vector3) Game.Input.RawMovement * Time.deltaTime * Speed);
 			GunSystem.Enabled = Game.Input.IsShooting;
 		}
 	}
