@@ -22,5 +22,10 @@ namespace Game.Artillery
         {
             Game.ShootPool.GiveBackItem(gameObject);
         }
+
+        public void Die()
+        {
+            Game.ShootPool.GiveBackItem(gameObject);
+        }
     }
 }
