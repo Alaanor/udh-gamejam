@@ -1,11 +1,12 @@
+using Game.Pool;
 using UnityEngine;
 
 namespace Game.Artillery
 {
     public abstract class Gun : MonoBehaviour
     {
-
         public float Cadence = 0.05f;
+        public PoolManagerBullet BulletStock;
 
         private float _lastShootTime;
         

@@ -6,7 +6,7 @@ namespace Game.Artillery
     {
         protected override void Shoot()
         {
-            var bullet = Game.ShootPool.GetItem();
+            var bullet = BulletStock.GetItem();
             bullet.Direction = Vector2.up;
             bullet.Speed = 25f;
             bullet.gameObject.transform.position = Game.PlayerSpaceShip

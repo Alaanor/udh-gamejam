@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace Game
 {
-    public class PlayerSpaceShip : MonoBehaviour
+    public class SpaceShip : MonoBehaviour
     {
         public float SpaceShipSize = 0.5f;
         
