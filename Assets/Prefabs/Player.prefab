@@ -54,8 +54,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92128da0b991408db4b3fa396f4f622b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Enabled: 0
   Cadence: 0.05
+  Speed: 25
+  GunUser: {fileID: 114936916586617568}
   BulletStock: {fileID: 0}
+  Direction: {x: 0, y: 1}
 --- !u!114 &114496797824833382
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -68,6 +72,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 15
+  GunSystem: {fileID: 0}
 --- !u!114 &114936916586617568
 MonoBehaviour:
   m_ObjectHideFlags: 1

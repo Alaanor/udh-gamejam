@@ -5,6 +5,7 @@ namespace Game.Artillery
 {
     public abstract class Gun : MonoBehaviour
     {
+        public bool Enabled = true;
         public float Cadence = 0.05f;
         public float Speed = 25f;
         public SpaceShip GunUser;
@@ -16,7 +17,7 @@ namespace Game.Artillery
         {
             var canShoot = Time.time > _lastShootTime;
 
-            if (!Game.Input.IsShooting || !canShoot)
+            if (!Enabled || !canShoot)
                 return;
             
             Shoot();

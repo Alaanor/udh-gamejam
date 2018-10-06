@@ -20,6 +20,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4197113344797276}
   - component: {fileID: 212278283138565934}
+  - component: {fileID: 114152472473603304}
+  - component: {fileID: 114250065609706342}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -34,12 +36,42 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1048832336952362}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 4.53, y: 2.22, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114152472473603304
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1048832336952362}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56153a721fcc4084ae59ecb023b0fe5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SpaceShipSize: 0.5
+--- !u!114 &114250065609706342
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1048832336952362}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 164bc22b25eb47368b77009cc2651dc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Enabled: 1
+  Cadence: 0.75
+  Speed: 3
+  GunUser: {fileID: 114152472473603304}
+  BulletStock: {fileID: 0}
+  AmountDirection: 8
+  Offset: 0
 --- !u!212 &212278283138565934
 SpriteRenderer:
   m_ObjectHideFlags: 1
