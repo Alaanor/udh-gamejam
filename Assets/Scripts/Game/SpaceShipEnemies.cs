@@ -5,13 +5,25 @@ namespace Game
 {
     public class SpaceShipEnemies : SpaceShip
     {
+        public float Speed = 5f;
         public ParticleSystem OnDieParticle;
+        private Rigidbody2D _rigidbody;
 
         public SpaceShipEnemies()
         {
             IsPlayer = false;
         }
-        
+
+        private void Start()
+        {
+            _rigidbody = GetComponent<Rigidbody2D>();
+        }
+
+        private void Update()
+        {
+            _rigidbody.MovePosition(_rigidbody.position + Vector2.down * Speed * Time.deltaTime);
+        }
+
         public override void OnDie()
         {
             StartCoroutine(ManageDyingEvent());
@@ -26,7 +38,14 @@ namespace Game
             while (OnDieParticle.IsAlive())
                 yield return null;
             
-            Destroy(gameObject);
+            gameObject.transform.localScale = Vector3.one;
+            Game.EnemiesPool.GiveBackItem(gameObject);
         }
+        
+        private void OnBecameInvisible()
+        {
+            Game.EnemiesPool.GiveBackItem(gameObject);
+        }
+
     }
 }

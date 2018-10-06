@@ -8,7 +8,14 @@ namespace Game
         public bool IsPlayer { get; protected set; }
         public int Life = 3;
         public float SpaceShipSize = 0.5f;
-        
+
+        private int _lifeSettings;
+
+        private void Awake()
+        {
+            _lifeSettings = Life;
+        }
+
         public Vector3 GetBulletStartPosition(Vector2 direction)
         {
             direction = direction.normalized;
@@ -27,6 +34,11 @@ namespace Game
                 OnDie();
 
             other.GetComponent<BulletController>().Die();
+        }
+
+        public void OnReset()
+        {
+            Life = _lifeSettings;
         }
 
         public virtual void OnDie() {}
