@@ -28,6 +28,7 @@ namespace Game.Artillery
         {
             var bullet = BulletStock.GetItem();
             
+            bullet.Pool = BulletStock;
             bullet.Direction = direction;
             bullet.Speed = Speed;
             bullet.gameObject.tag = GunUser.IsPlayer

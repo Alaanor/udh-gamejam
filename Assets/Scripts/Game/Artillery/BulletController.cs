@@ -1,3 +1,4 @@
+using Game.Pool;
 using UnityEngine;
 
 namespace Game.Artillery
@@ -6,6 +7,7 @@ namespace Game.Artillery
     {
         public Vector2 Direction = Vector2.zero;
         public float Speed;
+        public PoolManagerBullet Pool;
         private Rigidbody2D _rigidbody;
 
         private void Start()
@@ -20,12 +22,12 @@ namespace Game.Artillery
 
         private void OnBecameInvisible()
         {
-            Game.ShootPool.GiveBackItem(gameObject);
+            Pool.GiveBackItem(gameObject);
         }
 
         public void Die()
         {
-            Game.ShootPool.GiveBackItem(gameObject);
+            Pool.GiveBackItem(gameObject);
         }
     }
 }

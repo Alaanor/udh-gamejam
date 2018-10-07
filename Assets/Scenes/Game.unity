@@ -122,6 +122,8 @@ GameObject:
   m_Component:
   - component: {fileID: 264054526}
   - component: {fileID: 264054525}
+  - component: {fileID: 264054527}
+  - component: {fileID: 264054528}
   m_Layer: 0
   m_Name: Game
   m_TagString: Untagged
@@ -155,6 +157,30 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &264054527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 264054524}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f013be4f0494e1fa6847961b4684576, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &264054528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 264054524}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d526e0278e914c7f92c6c8d119063a13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CurrentLevel: 1
+  Generator: {fileID: 264054527}
 --- !u!1 &481815542
 GameObject:
   m_ObjectHideFlags: 0
@@ -192,10 +218,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 481815542}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a9fcca749ae84e1482cb7865ef5c63ea, type: 3}
+  m_Script: {fileID: 11500000, guid: e66227bfc52e44cf8e20dda86f3a72a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DefaultName: Enemy
+  DefaultName: Enemies
   WarmUpAmount: 25
   Item: {fileID: 1522671662988598, guid: 4f5853ab78dcee942839d62c07514c72, type: 2}
   UnusedPlace: {fileID: 481815543}

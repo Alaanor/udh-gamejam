@@ -9,7 +9,8 @@ namespace Game.Pool
         {
             var spaceShip = base.GetItem().GetComponent<SpaceShip>();
             var gunSystem = spaceShip.GetComponent<Gun>();
-            gunSystem.BulletStock = Game.ShootPool;
+            gunSystem.BulletStock = Game.ShootPoolTriangle;
+            spaceShip.transform.localScale = Vector3.one;
 
             return spaceShip;
         }
