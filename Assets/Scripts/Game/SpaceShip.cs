@@ -9,6 +9,8 @@ namespace Game
         public bool IsPlayer { get; protected set; }
         public int Life = 3;
         public float SpaceShipSize = 0.5f;
+        public event Action OnTakeHit;
+        public event Action OnDieEvent;
 
         public bool IsAlive { get; private set; } = true;
         private int _lifeSettings;
@@ -28,7 +30,10 @@ namespace Game
         {
             if (other.CompareTag(Game.FromEnemies) && IsPlayer ||
                 other.CompareTag(Game.FromPlayer) && !IsPlayer)
+            {
                 Life--;
+                OnTakeHit?.Invoke();
+            }
             else
                 return;
 
@@ -41,6 +46,7 @@ namespace Game
         protected virtual void OnDie()
         {
             IsAlive = false;
+            OnDieEvent?.Invoke();
         }
 
         public virtual void OnReset()
