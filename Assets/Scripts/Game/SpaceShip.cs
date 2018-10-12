@@ -1,3 +1,4 @@
+using System;
 using Game.Artillery;
 using UnityEngine;
 
@@ -9,6 +10,7 @@ namespace Game
         public int Life = 3;
         public float SpaceShipSize = 0.5f;
 
+        public bool IsAlive { get; private set; } = true;
         private int _lifeSettings;
 
         private void Awake()
@@ -29,18 +31,23 @@ namespace Game
                 Life--;
             else
                 return;
-            
+
             if (Life == 0)
                 OnDie();
 
             other.GetComponent<BulletController>().Die();
         }
 
-        public void OnReset()
+        protected virtual void OnDie()
         {
-            Life = _lifeSettings;
+            IsAlive = false;
         }
 
-        public virtual void OnDie() {}
+        public virtual void OnReset()
+        {
+            Life = _lifeSettings;
+            IsAlive = true;
+        }
+
     }
 }
